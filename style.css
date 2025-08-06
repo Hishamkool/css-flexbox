@@ -15,25 +15,39 @@ body {
 
 .wrapper .flex-container {
     display: flex;
-     
+    background-color: #ffffff;
+    flex-wrap: wrap;
 }
 
 .box {
-    height: 120px;
-    min-width: 100px;
+    height: 100px;
+    background-color: rgb(125, 203, 1);
+    /* flex-grow: 1; */
+    flex: 1 1 200px;
+    /* flex: [flex grow]  [flex shrink] [flex basis] 
+    
+    flex: 1 - means flex grow and shrink is one but flex basis is 0*/
+
+
 }
 
 .one {
     background-color: rebeccapurple;
+    /* flex-basis: 100px;  */
+    /* <!--flex basis or min width similar--> */
 
 }
 
 .two {
     background-color: brown;
+    /* flex-basis: 200px; */
+
 
 }
 
 .three {
     background-color: tomato;
+    /* flex-basis: 300px; */
+
 
 }

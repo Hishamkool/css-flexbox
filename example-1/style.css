@@ -1,13 +1,17 @@
-*{
+* {
+
     font-family: verdana;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid green; */
 }
 
-body{
+body {
     background: #eee;
 }
 
-.wrapper{
+.wrapper {
     width: 100%;
     max-width: 960px;
     margin: 0 auto;
@@ -15,7 +19,45 @@ body{
 
 /* menu base styles */
 
+nav {
+    background-color: #444;
+    color: white;
 
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+
+nav ul a {
+    border-bottom: 1px solid grey;
+    background-color: #777;
+    padding: 10px 10px;
+
+    text-decoration: none;
+    color: white;
+    display: block;
+    width: 100%;
+
+}
+
+nav ul a:hover {
+    background-color: #555;
+}
 
 
 /* flex styles */
+
+@media screen and (min-width:768px) {
+    nav ul {
+        display: flex;
+
+    }
+
+    nav ul li {
+
+        flex: 1 1 0;
+        text-align: center;
+    }
+}
