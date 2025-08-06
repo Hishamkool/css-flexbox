@@ -1,0 +1,39 @@
+* {
+    font-family: verdana;
+    margin: 0;
+}
+
+body {
+    background: #eee;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.wrapper .flex-container {
+    display: flex;
+     
+}
+
+.box {
+    height: 120px;
+    min-width: 100px;
+}
+
+.one {
+    background-color: rebeccapurple;
+
+}
+
+.two {
+    background-color: brown;
+
+}
+
+.three {
+    background-color: tomato;
+
+}
