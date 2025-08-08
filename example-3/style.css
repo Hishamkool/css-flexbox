@@ -1,14 +1,14 @@
-*{
+* {
   font-family: verdana;
   margin: 0;
 }
 
-body{
+body {
   background: #eee;
   color: #333;
 }
 
-.wrapper{
+.wrapper {
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
@@ -16,16 +16,16 @@ body{
 
 /* menu base styles */
 
-nav{
+nav {
   background: #333;
 }
 
-nav ul{
+nav ul {
   list-style-type: none;
   padding: 0;
 }
 
-nav a{
+nav a {
   text-decoration: none;
   text-align: center;
   color: #fff;
@@ -33,66 +33,124 @@ nav a{
   padding: 10px;
 }
 
-nav a:hover{
+nav a:hover {
   background-color: #555;
 }
 
 /* social menu base styles */
 
-a.tw{
+a.tw {
   background: url(img/tw.png) no-repeat center;
   background-size: 80%;
-    
+
 }
 
-a.fb{
+a.fb {
   background: url(img/fb.png) no-repeat center;
   background-size: 80%;
 }
 
-.social a{
+.social a {
   text-indent: -10000px;
   margin: 0 auto;
 }
 
-.social{
+.social {
   max-width: 80px;
-  margin: 0 auto; /* do at end */
+  margin: 0 auto;
+  /* do at end */
 }
 
 /* grid vs flex base styles */
+#blocks {
+  margin: 20px;
+}
 
+article {
+  background: #fff;
+  margin-bottom: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+
+
+
+
+article h2 {
+  text-align: center;
+  font-size: 20px;
+  margin: 10px 0;
+}
 
 
 /* flex styles */
 
-nav ul.social li{
+nav ul.social li {
   flex: 1 1 0;
 }
 
-nav ul.social{
+nav ul.social {
   flex: 1 1 0;
   display: flex;
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
 
-nav ul{
-  display: flex;
+  nav ul {
+    display: flex;
+  }
+
+  nav li {
+    flex: 1 1 0;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  ul.social {
+    margin: 0;
+  }
+
+  #blocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  article {
+    flex: 0 1 32%;
+    transition: flex-basis 0.4s linear;
+  }
+
+  article.stack {
+    flex: 0 1 100%;
+    /* flex: none;
+  width: 100%;
+  box-sizing: border-box; */
+  }
+
 }
 
-nav li{
-  flex: 1 1 0;
-}
+/* end media 768 */
+
+
+
+
+/* mobile design */
+/* @media screen and (max-width: 400px) {
+
+  #blocks {
+    display: block;
     
-nav{
-  display: flex;
-  justify-content: space-between;
-}
-  
-ul.social{
-  margin: 0;
-}
-    
-} /* end media 768 */
+     
+  }
 
+  article {
+    flex: none;
+    width: 100%;
+    box-sizing: border-box;
+  }
+} */
