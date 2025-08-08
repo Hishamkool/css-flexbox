@@ -1,6 +1,6 @@
 * {
     font-family: verdana;
-    margin: 0; 
+    margin: 0;
 }
 
 body {
@@ -18,15 +18,16 @@ body {
 
     border: 3px dashed black;
     padding: 1px;
-    margin: 1px;
+    margin: 10px;
     display: flex;
     background-color: #ffffff;
-    flex-wrap: wrap;
+    justify-content: space-between;
 
+
+    flex-wrap: wrap;
     flex-flow: row;
-    /* justify-content: center; */
+
     /* main axis */
-    /* align-items: center; */
     /* cross axis */
 
 
@@ -35,8 +36,13 @@ body {
 .box {
     background-color: rgb(125, 203, 1);
     height: 100px;
-    flex: 1 1 auto;
- 
+    flex: 0 0 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
 
     /* flex-grow: 1; */
     /* flex: [flex grow]  [flex shrink] [flex basis] 
@@ -48,6 +54,7 @@ body {
 
 .one {
     background-color: rebeccapurple;
+
     /* flex-basis: 100px;  */
     /* <!--flex basis or min width similar--> */
 
@@ -65,4 +72,25 @@ body {
     /* flex-basis: 300px; */
 
 
+}
+
+.four {
+    background-color: magenta;
+}
+
+.one {
+    order: 1;
+}
+
+.two {
+    order: 2;
+}
+
+.three {
+    order: 99;
+    /* order greater last order less first , even in negative */
+}
+
+.four {
+    order: 0;
 }
